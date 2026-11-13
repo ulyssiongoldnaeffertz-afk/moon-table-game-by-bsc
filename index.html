@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101321">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="在同一张桌上，用各自的手机玩狼人杀和阿瓦隆。">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <title>月下圆桌 V3 · 好友入座，好戏开场</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/app.mjs"></script>
+</head>
+<body>
+  <a class="skip-link" href="#app">跳到主要内容</a>
+  <header class="site-header">
+    <div class="site-inner">
+      <a class="brand" href="#lobby" aria-label="月下圆桌大厅"><span class="brand-emblem" aria-hidden="true">☾</span><span>月下圆桌<small>MOON TABLE</small></span></a>
+      <nav class="main-nav" aria-label="主导航">
+        <a href="#lobby" data-nav="lobby">大厅</a>
+        <a href="#rules" data-nav="rules">规则</a>
+        <a href="#profile" data-nav="profile">我的</a>
+      </nav>
+      <span class="connection-pill" id="connection" role="status">正在连接</span>
+    </div>
+  </header>
+  <div id="network" class="network" role="status" hidden></div>
+  <main id="app" class="site-inner" tabindex="-1"><div class="loading" role="status">正在连接大厅…</div></main>
+  <footer class="site-footer site-inner"><span class="footer-mark" aria-hidden="true">☾</span><p>一切解释权归至高无上的牢白所有</p><span class="footer-caption">月下圆桌 · 和朋友，认真玩一场</span></footer>
+  <nav class="mobile-nav" aria-label="手机主导航">
+    <a href="#lobby" data-nav="lobby"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10H3Z"/><path d="M9 20v-7h6v7"/></svg><span>游戏大厅</span></a>
+    <a href="#rules" data-nav="rules"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5c-3-2-6-2-9-1v15c3-1 6-1 9 1 3-2 6-2 9-1V4c-3-1-6-1-9 1Zm0 0v15"/></svg><span>玩法手册</span></a>
+    <a href="#profile" data-nav="profile"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg><span>我的圆桌</span></a>
+  </nav>
+  <dialog id="dialog" aria-labelledby="dialog-title"><div id="dialog-content"></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <noscript><div class="site-inner loading">请在浏览器设置中启用 JavaScript，然后重新打开。</div></noscript>
+</body>
+</html>
